@@ -43,7 +43,7 @@ public class BaseLib {
 		 
 		 if(browser.equalsIgnoreCase("firefox"))
 		 { 
-			 //System.setProperty("webdriver.gecko.driver","C:/Users/ginger/git/AllenDSAT/driverfiles/geckodriver.exe");
+			 //System.setProperty("webdriver.gecko.driver","E:/Projects/AllenPlus/driverfiles/geckodriver.exe");
 			 WebDriverManager.firefoxdriver().setup();
 			 driver=new FirefoxDriver();
 			 System.out.println("\n");
@@ -54,7 +54,7 @@ public class BaseLib {
 		 else 
 		 if(browser.equalsIgnoreCase("chrome"))
 		 { 
-			//System.setProperty("webdriver.chrome.driver","C:/Users/ginger/git/AllenDSAT/driverfiles/chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver","E:/Projects/AllenPlus/driverfiles/chromedriver.exe");
 			 WebDriverManager.chromedriver().setup();
 			 driver=new ChromeDriver();
 			 System.out.println("\n");
@@ -112,7 +112,7 @@ public class BaseLib {
 		extent.endTest(loggerE);
 		extent.flush();
 		//extent.close();
-		driver.get("file:C:/Users/ginger/git/AllenDSAT/log/report.html");
+		driver.get("file:E:/Projects/AllenPlus/log/report.html");
 		//driver.close();
 		//logger.info("Browser is closed");
 		//Reporter.log("Browser is closed");

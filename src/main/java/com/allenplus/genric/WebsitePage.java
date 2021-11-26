@@ -2,8 +2,6 @@ package com.allenplus.genric;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 
@@ -11,14 +9,6 @@ public class WebsitePage{
 	
 	Logger logger=Logger.getLogger("WebsitePage");
 	
-	@FindBy(xpath="//a[@class='first']//i[@class='sprite']")
-	private WebElement homeBtn;
-	
-	@FindBy(xpath="//span[text()='Student Login']")
-	private WebElement studentLoginBtn;
-	
-	@FindBy(xpath="//span[text()='Buy Package']")
-	private WebElement buyPackageBtn;
 	
 	//@FindBy(xpath="")
  
@@ -35,39 +25,39 @@ public class WebsitePage{
 	{
 		driver.manage().window().maximize();
 		
-		if(environment.equalsIgnoreCase("Local")&&panel.equalsIgnoreCase("Student"))
+		if(environment.equalsIgnoreCase("QA")&&panel.equalsIgnoreCase("Student"))
 		{
-			driver.get("http://192.168.0.116/allendsat/");
+			driver.get("http://allenqa.thinkexam.com/");
 			logger.info("Test is Executed at "+panel+" Panel at "+environment+" server\n");
 			Reporter.log("\n                  ==========================================================\n                      Test is Executed on "+panel+" Panel at "+environment+" server\n                  ==========================================================\n",true);
 		}
 		else if(environment.equalsIgnoreCase("uat")&&panel.equalsIgnoreCase("Student"))
 		{
-			driver.get("http://dsatuat.thinkexam.com/");
+			driver.get("");
 			logger.info("Test is Executed at "+panel+" Panel at "+environment+" server\n");
 			Reporter.log("\n                  ==========================================================\n                      Test is Executed on "+panel+" Panel at "+environment+" server\n                  ==========================================================\n",true);
 		}
 		else if(environment.equalsIgnoreCase("Live")&&panel.equalsIgnoreCase("Student"))
 		{
-			driver.get("https://dsat.allen.ac.in/");
+			driver.get("https://allenplus.allen.ac.in/");
 			logger.info("Test is Executed at "+panel+" Panel at "+environment+" server\n");
 			Reporter.log("\n                  ==========================================================\n                      Test is Executed on "+panel+" Panel at "+environment+" server\n                  ==========================================================\n",true);
 		}
-		if(environment.equalsIgnoreCase("Local")&&panel.equalsIgnoreCase("Admin"))
+		if(environment.equalsIgnoreCase("QA")&&panel.equalsIgnoreCase("Admin"))
 		{
-			driver.get("http://192.168.0.250/thinkExam/allendsat/admin/");
+			driver.get("http://allenqa.thinkexam.com//admin/");
 			logger.info("Test is Executed at "+panel+" Panel at "+environment+" server\n");
 			Reporter.log("\n                  ==========================================================\n                      Test is Executed on "+panel+" Panel at "+environment+" server\n                  ==========================================================\n",true);
 		}
 		else if(environment.equalsIgnoreCase("uat")&&panel.equalsIgnoreCase("Admin"))
 		{
-			driver.get("http://dsatuat.thinkexam.com/admin/");
+			driver.get("");
 			logger.info("Test is Executed at "+panel+" Panel at "+environment+" server\n");
 			Reporter.log("\n                  ==========================================================\n                      Test is Executed on "+panel+" Panel at "+environment+" server\n                  ==========================================================\n",true);
 		}
 		else if(environment.equalsIgnoreCase("Live")&&panel.equalsIgnoreCase("Admin"))
 		{
-			driver.get("https://dsat.allen.ac.in/admin/");
+			driver.get("https://allenplus.allen.ac.in/admin/");
 			logger.info("Test is Executed at "+panel+" Panel at "+environment+" server\n");
 			Reporter.log("\n                  ==========================================================\n                      Test is Executed on "+panel+" Panel at "+environment+" server\n                  ==========================================================\n",true);
 		}
